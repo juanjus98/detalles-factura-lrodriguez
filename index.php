@@ -40,7 +40,7 @@ $articulos = getArticulos($mysqli);
 				</select>
 			</td>
 			<td>
-				<select name="descripcion[]">
+				<select name="descripcion[]" onchange="updateRow(this)">
 					<option value="">Seleccionar</option>
 					<?php
 					if(!empty($articulos)){
