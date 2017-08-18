@@ -27,8 +27,8 @@ $articulos = getArticulos($mysqli);
 	<tbody>
 		<!-- fila plantilla-->
 		<tr style="display: none;">
-			<td>
-				<select name="codigo[]" onchange="updateRow(this)">
+			<td class="codigotd">
+				<select name="codigo[]" class="elm_codigo" onchange="updateRow(this)">
 					<option value="">Seleccionar</option>
 					<?php
 					if(!empty($articulos)){
@@ -39,8 +39,8 @@ $articulos = getArticulos($mysqli);
 					?>
 				</select>
 			</td>
-			<td>
-				<select name="descripcion[]" onchange="updateRow(this)">
+			<td class="descripciontd">
+				<select name="descripcion[]" class="elm_descripcion" onchange="updateRow(this)">
 					<option value="">Seleccionar</option>
 					<?php
 					if(!empty($articulos)){
@@ -51,17 +51,17 @@ $articulos = getArticulos($mysqli);
 					?>
 				</select>
 			</td>
-			<td>
-				<input type="text" name="cantidad[]" value="">
+			<td class="cantidadtd">
+				<input type="text" name="cantidad[]" class="elm_cantidad" value="">
 			</td>
-			<td>
-				<input type="text" name="precio_unitario[]" value="">
+			<td class="precio_unitariotd">
+				<input type="text" name="precio_unitario[]" class="elm_precio_unitario" value="">
 			</td>
-			<td>
-				<input type="text" name="subtotal[]" value="">
+			<td class="subtotaltd">
+				<input type="text" name="subtotal[]" class="elm_subtotal" value="">
 			</td>
-			<td>
-				<button type="button">X</button>
+			<td  class="eliminartd">
+				<button type="button" class="btn-eliminar">X</button>
 			</td>
 		</tr>
 		<!-- //fila plantilla-->
